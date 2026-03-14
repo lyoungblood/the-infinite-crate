@@ -25,6 +25,7 @@ import {
   DensitySlider,
   BrightnessSlider,
   MutesToggleGroup,
+  LyriaTouchPad,
 } from '@/components/lyria/controls';
 // import {ChaosVisualizer} from '@/components/lyria/visualizers';
 
@@ -42,6 +43,9 @@ const CorePanel: React.FC & TabProps = () => {
         <MutesToggleGroup />
       </Div>
       <GuidanceSlider />
+      <Div className={touchPadContainer}>
+        <LyriaTouchPad />
+      </Div>
     </Flex>
   );
 };
@@ -50,5 +54,6 @@ CorePanel.label = 'Controls';
 
 const panelContainer = 'mt-3';
 const mutesContainer = 'mt-6 mb-4';
+const touchPadContainer = 'mt-4';
 
 export {CorePanel};

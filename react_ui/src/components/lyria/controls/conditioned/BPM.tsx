@@ -44,6 +44,10 @@ const BPMSlider: React.FC = () => {
   function handlePointerDown(e: PointerEvent<HTMLDivElement>) {
     if (!isControls) return;
 
+    // Capture pointer for reliable touch tracking and prevent browser gestures
+    (e.target as HTMLElement).setPointerCapture(e.pointerId);
+    e.preventDefault();
+
     currentY.current = e.clientY;
 
     window.addEventListener('pointermove', handlePointerMove);
@@ -139,7 +143,7 @@ const BPMSlider: React.FC = () => {
 
 const container = `ml-[10px]
   flex flex-col items-center h-[170px] w-[100px] bg-progress opacity-90
-  rounded-[8px]`;
+  rounded-[8px] touch-none`;
 const outerWrapper = `mt-[58px] relative w-[80px] h-20 flex flex-col items-center justify-center`;
 
 const onOffContainer = `absolute -top-[48px] left-[0px] border-card border-[4px]`;
