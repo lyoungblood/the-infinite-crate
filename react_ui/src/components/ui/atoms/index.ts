@@ -18,3 +18,4 @@ export {OnOffSwitch} from './onoff';
 export {SliderBig} from './sliderBig';
 export {TooltipAtom} from './tooltipAtom';
 export {Knob} from './knob';
+export {TouchXYPad} from './touchXYPad';

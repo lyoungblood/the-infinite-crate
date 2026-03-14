@@ -23,4 +23,5 @@ export {BrightnessSlider} from './conditioned/Brightness';
 export {MutesToggleGroup} from './conditioned/Mutes';
 export {ScaleToggleGroup} from './conditioned/Scale';
 export {GenerationModeSelect} from './conditioned/Mode';
+export {LyriaTouchPad} from './base/TouchPad';
 export {Controls} from './Controls';

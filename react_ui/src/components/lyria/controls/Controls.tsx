@@ -114,7 +114,7 @@ const Controls: React.FC = () => {
 };
 
 const cardContainer = 'pt-6 pb-12 px-8 flex';
-const panelContainer = 'items-start w-[300px] h-[455px]';
+const panelContainer = 'items-start w-[300px] h-[455px] overflow-y-auto';
 const tabsContainer = ' mt-4';
 const updateButton = 'mt-4';
 const infoContainer = 'mt-[12px]';

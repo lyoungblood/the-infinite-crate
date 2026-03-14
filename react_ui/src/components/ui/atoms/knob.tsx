@@ -62,6 +62,10 @@ const Knob: React.FC<KnobProps> = ({
   function handlePointerDown(e: PointerEvent<HTMLDivElement>) {
     if (disabled) return;
 
+    // Capture pointer for reliable touch tracking and prevent browser gestures
+    (e.target as HTMLElement).setPointerCapture(e.pointerId);
+    e.preventDefault();
+
     currentY.current = e.clientY;
 
     window.addEventListener('pointermove', handlePointerMove);
@@ -155,7 +159,7 @@ const Knob: React.FC<KnobProps> = ({
 };
 
 const container = `flex flex-col items-center`;
-const outerWrapper = `relative w-20 h-20`;
+const outerWrapper = `relative w-20 h-20 touch-none`;
 
 const backgroundArc = `
   arc absolute inset-0 bg-secondary`;

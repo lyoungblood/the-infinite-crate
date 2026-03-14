@@ -43,6 +43,6 @@ const track =
   'relative h-8 w-full grow overflow-hidden rounded-full bg-secondary';
 const range = 'absolute h-full rounded-full';
 const thumb =
-  'block h-10 w-10 rounded-full border border-border bg-primary shadow shadow-border transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50';
+  'block h-12 w-12 rounded-full border border-border bg-primary shadow shadow-border transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50';
 
 export {SliderBig};
